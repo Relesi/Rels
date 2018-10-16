@@ -1,5 +1,8 @@
 package com.relesi.rels.api.documents;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -64,7 +67,7 @@ public class Cliente {
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	@NotEmpty(message = "Nome não pode ser vazio")
 	public String getNome() {
 		return nome;
 	}
@@ -73,6 +76,8 @@ public class Cliente {
 		this.nome = nome;
 	}
 
+	@NotEmpty(message = "Email não pode ser vazio")
+	@Email(message = "Email invalido")
 	public String getEmail() {
 		return email;
 	}
@@ -80,7 +85,8 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	@NotEmpty(message = "Cpf não pode ser vazio")
+	@CPF(message = "Cpf invalido")
 	public String getCpf() {
 		return cpf;
 	}
