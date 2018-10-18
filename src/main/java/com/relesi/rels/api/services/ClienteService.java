@@ -20,5 +20,12 @@ public interface ClienteService {
 	void remover(String id);
 	
 	
+	public default void run() {
+		
+		this.listarTodos();
+		 
+	}
+	
+	
 	
 }
