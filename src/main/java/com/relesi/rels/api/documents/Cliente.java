@@ -17,7 +17,7 @@ public class Cliente {
 		super();
 	}
 
-	@Override
+	/*@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -58,7 +58,7 @@ public class Cliente {
 		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
-	}
+	}*/
 
 	public String getId() {
 		return id;

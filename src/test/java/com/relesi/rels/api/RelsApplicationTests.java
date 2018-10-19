@@ -20,8 +20,7 @@ public class RelsApplicationTests {
 	@Mock
 	private ClienteService clienteService;
 	
-	@Mock
-	private ClienteServiceImpl clienteServiceImpl;
+	
 	
 
 	@Test
@@ -30,7 +29,7 @@ public class RelsApplicationTests {
 		Mockito.doNothing().when(clienteService).run();
 		
 		try {
-			((ClienteService) this.relsApplication).run();
+			this.relsApplication.run();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
