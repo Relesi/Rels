@@ -43,10 +43,7 @@ public class ClienteControllerTest {
 		        
 		    }
 		 
-			// Implementa método de teste unitário: Idade
-			Participante p2 = new Participante();
-			p2.setIdade(20);
-			assertEquals(20, p2.getIdade());
+			
 		
 		
 		
